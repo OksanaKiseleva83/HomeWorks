@@ -1,26 +1,15 @@
-package ThirdLesson;
+package thirdlesson;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class HomeWorkThirdLesson {
     public static void main(String[] args) {
-        greetings();
-        checkSign(-9, -1, 9);
-        checkSign(0, 0, 9);
-        checkSign(0, 0, 0);
-        selectColor();
-        compareNumbers();
-        addOrSubtractAndPrint(0, 5, true);
-        addOrSubtractAndPrint(0, 5, false);
         randomSelection();
     }
 
     public static void greetings() {
-        System.out.println("Hello");
-        System.out.println("World");
-        System.out.println("from");
-        System.out.println("Java");
+        System.out.println("Hello\nWorld\nfrom\nJava");
     }
 
     public static void checkSign(int a, int b, int c) {
@@ -33,7 +22,7 @@ public class HomeWorkThirdLesson {
         System.out.print(data + " ");
         if (data <= 10) System.out.println("Красный");
         else {
-            if (data > 10 && data <= 20) System.out.println("Желтый");
+            if (data <= 20) System.out.println("Желтый");
             else {
                 System.out.println("Зеленый");
             }
@@ -52,9 +41,9 @@ public class HomeWorkThirdLesson {
 
     public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
         if (increment) {
-            System.out.println(initValue = +delta);
+            System.out.println(initValue += delta);
         } else {
-            System.out.println(initValue = -delta);
+            System.out.println(initValue -= delta);
         }
     }
 
