@@ -3,7 +3,7 @@ package fifthlesson;
 public class HomeWorkFifthLesson {
 
     public static void main(String[] args) {
-        // 1)
+        /*// 1)
         printStringNumberOfTimes("Hello World!", 3);
 
         // 2)
@@ -29,9 +29,17 @@ public class HomeWorkFifthLesson {
         int[] array3 = {1, 0, 11, 7, 4, 2, 9, 100};
         researchSum(array3);
         int[] array4 = {0, 0, 0, 0, 0, 0, 0, 0};
-        researchSum(array4);
+        researchSum(array4);*/
 
-
+        //*)
+        int[] arraySource1 = {1,1,1,1,1,5};
+        int[] arraySource2 = {5,3,4,-2};
+        int[] arraySource3 = {7,2,2,2};
+        int[] arraySource4 = {9,4};
+        checkPoint(arraySource1);
+        checkPoint(arraySource2);
+        checkPoint(arraySource3);
+        checkPoint(arraySource4);
     }
 
     // 1 Реализуйте метод, принимающий в качестве аргументов целое число и строку,
@@ -94,6 +102,26 @@ public class HomeWorkFifthLesson {
             }
         } else System.out.println("Массив нельзя поделить на равные по количеству элементов половины");
 
+    }
+
+    //Реализуйте метод, проверяющий, что есть точка в массиве, в которой сумма левой и правой части
+    //равны. Точка находится между элементами
+    public static void checkPoint(int[] arraySource){
+        int check = 0;
+        for(int i : arraySource){
+            check += i;
+        }
+        if(check%2 == 0){
+            int tmp=0;
+            for(int i=0; i<arraySource.length; i++){
+                if(tmp<check/2){
+                    tmp +=arraySource[i];
+                }else{
+                    System.out.println("точка есть между элементами массива с индексами " + i + " и " + (i+1));
+                    break;
+                }
+            }
+        } else System.out.println("точки нет");
     }
 
 
