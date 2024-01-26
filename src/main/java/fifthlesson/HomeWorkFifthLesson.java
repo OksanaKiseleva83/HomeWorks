@@ -3,7 +3,7 @@ package fifthlesson;
 public class HomeWorkFifthLesson {
 
     public static void main(String[] args) {
-        /*// 1)
+        // 1)
         printStringNumberOfTimes("Hello World!", 3);
 
         // 2)
@@ -29,7 +29,7 @@ public class HomeWorkFifthLesson {
         int[] array3 = {1, 0, 11, 7, 4, 2, 9, 100};
         researchSum(array3);
         int[] array4 = {0, 0, 0, 0, 0, 0, 0, 0};
-        researchSum(array4);*/
+        researchSum(array4);
 
         //*)
         int[] arraySource1 = {1,1,1,1,1,5};
@@ -48,9 +48,6 @@ public class HomeWorkFifthLesson {
         for (int i = 0; i < number; i++) {
             System.out.println(str);
         }
-        /*for (int i=number; i>0; i--){
-            System.out.println(str);
-        }*/
     }
 
     //Реализуйте метод, принимающий в качестве аргумента целочисленный массив,
