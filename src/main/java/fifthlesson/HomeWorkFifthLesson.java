@@ -40,6 +40,13 @@ public class HomeWorkFifthLesson {
         checkPoint(arraySource2);
         checkPoint(arraySource3);
         checkPoint(arraySource4);
+
+        int[] arrayForConvert1 = {1,2,3,4};
+        int[] arrayForConvert2 = {1,2,3,4,5};
+        int[] arrayForConvert3 = {0,1};
+        convertArray(arrayForConvert1);
+        convertArray(arrayForConvert2);
+        convertArray(arrayForConvert3);
     }
 
     // 1 Реализуйте метод, принимающий в качестве аргументов целое число и строку,
@@ -119,6 +126,29 @@ public class HomeWorkFifthLesson {
                 }
             }
         } else System.out.println("точки нет");
+    }
+
+    //Реализуйте метод, переворачивающий входящий массив
+    //Пример: { 1 2 3 4 } => { 4 3 2 1 }
+    public static void convertArray(int[] arraySource){
+        for (int i : arraySource){
+            System.out.print(i);
+        }
+        System.out.println();
+
+        int j = arraySource.length-1;
+        int x = 0;
+        for(int i=0; i <= (arraySource.length/2 - 1); i++){
+            x= arraySource[j];
+            arraySource[j] = arraySource[i];
+            arraySource[i] = x;
+            j--;
+        }
+
+        for (int i : arraySource){
+            System.out.print(i);
+        }
+        System.out.println();
     }
 
 
