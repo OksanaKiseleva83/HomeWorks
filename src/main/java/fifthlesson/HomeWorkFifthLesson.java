@@ -18,13 +18,13 @@ public class HomeWorkFifthLesson {
 
         //4)
         int[] array = {1,0,11,7,4,2,9};
-        incrementElementOfArray(array,-3);
-        incrementElementOfArray(array,3);
+        incrementElementsOfArray(array,-3);
+        incrementElementsOfArray(array,3);
 
         //5)
         int[] array1 = {1, 0, 11, 7, 4, 2, 9};
         researchSum(array1);
-        int[] array2 = {1, 0, 11, 7, 4, 2, 9, 7};
+        int[] array2 = {1, 0, 11, 7, 4, 2, 9, 0};
         researchSum(array2);
         int[] array3 = {1, 0, 11, 7, 4, 2, 9, 100};
         researchSum(array3);
@@ -77,7 +77,7 @@ public class HomeWorkFifthLesson {
 
     //Реализуйте метод, принимающий в качестве аргументов целое число и ссылку на целочисленный массив,
     // увеличивающий каждый элемент которого на указанное число.
-    public static void incrementElementOfArray(int[] array, int value) {
+    public static void incrementElementsOfArray(int[] array, int value) {
         for (int i = 0; i < array.length; i++) {
             array[i] += value;
         }
@@ -88,12 +88,20 @@ public class HomeWorkFifthLesson {
     public static void researchSum(int[] array) {
         int sumLeft = 0;
         int sumRight = 0;
+        int midpoint = array.length / 2;
         if (array.length % 2 == 0) {
-            for (int i = 0; i < array.length / 2; i++) {
-                sumLeft += array[i];
-            }
-            for (int y = array.length - 1; y > array.length / 2; y--) {
-                sumRight += array[y];
+//            for (int i = 0; i < array.length / 2; i++) {
+//                sumLeft += array[i];
+//            }
+//            for (int y = array.length - 1; y > array.length / 2; y--) {
+//                sumRight += array[y];
+//            }
+            for (int i = 0; i < array.length; i++) {
+                if (i < midpoint) {
+                    sumLeft += array[i];
+                } else {
+                    sumRight += array[i];
+                }
             }
             if (sumLeft > sumRight) {
                 System.out.println("Сумма левой половины массива больше суммы правой");
@@ -105,7 +113,6 @@ public class HomeWorkFifthLesson {
                 }
             }
         } else System.out.println("Массив нельзя поделить на равные по количеству элементов половины");
-
     }
 
     //Реализуйте метод, проверяющий, что есть точка в массиве, в которой сумма левой и правой части
