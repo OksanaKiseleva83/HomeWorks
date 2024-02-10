@@ -25,7 +25,7 @@ public abstract class Animal {
         if (endurance >= 0){
             return distance / getSpeedRunning();
         }else{
-            System.out.println("У животного " + getType() + " появилось состояние усталости");
+            System.out.println("У животного " + getType() + " появилось состояние усталости!");
             return -1;
         }
     }

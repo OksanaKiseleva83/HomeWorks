@@ -12,7 +12,7 @@ public class Horse extends Animal{
         if (getEndurance() >= 0) {
             return distance / getSpeedSwimming();
         }else{
-            System.out.println("У " + getType() + " появилось состояние усталости");
+            System.out.println("У " + getType() + " появилось состояние усталости!");
             return  -1;
         }
     }
