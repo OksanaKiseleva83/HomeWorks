@@ -17,7 +17,7 @@ public abstract class Animal {
         this.speedRunning = speedRunning;
         this.speedSwimming = speedSwimming;
         this.endurance = endurance;
-        this.setType(type);
+        this.type=type;
     }
 
     public int run(int distance) {
