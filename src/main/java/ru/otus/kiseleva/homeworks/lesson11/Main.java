@@ -1,4 +1,4 @@
-package lessonnumbereleven;
+package ru.otus.kiseleva.homeworks.lesson11;
 
 public class Main {
 
@@ -19,17 +19,21 @@ public class Main {
          * При выполнении действий пишем сообщения в консоль.
          * Добавляем метод info(), который выводит в консоль состояние животного.
          */
-        Dog dog = new Dog("Pink", 48,4,100, "собака");
+        Dog dogFirst = new Dog("Pink", 48,4,100, "собака");
+        Dog dogSecond = new Dog("Border", 48,-1,100, "собака");
         Cat cat = new Cat("Java", 10,-1,50, "кот");
-        Horse horse = new Horse("Spirit", 71,20,1500, "лошадь");
+        Horse spirit = new Horse("Spirit", 71,20,1500, "лошадь");
+        Horse soul = new Horse("Soul", 71,-1,1500, "лошадь");
 
-        dog.info();
-        dog.run(15);
-        dog.info();
-        dog.swim(5);
-        dog.info();
-        dog.run(100);
-        dog.info();
+        dogFirst.info();
+        dogFirst.run(15);
+        dogFirst.info();
+        dogFirst.swim(5);
+        dogFirst.info();
+        dogFirst.run(100);
+        dogFirst.info();
+        dogFirst.run(100);
+        dogFirst.info();
         System.out.println();
         cat.info();
         cat.run(2);
@@ -37,13 +41,25 @@ public class Main {
         cat.swim(5);
         cat.info();
         System.out.println();
-        horse.info();
-        horse.run(100);
-        horse.info();
-        horse.swim(10);
-        horse.info();
-        horse.run(1500);
-        horse.info();
+        spirit.info();
+        spirit.run(100);
+        spirit.info();
+        spirit.swim(10);
+        spirit.info();
+        spirit.run(1500);
+        spirit.info();
+        spirit.run(1500);
+        spirit.info();
+        System.out.println();
+        dogSecond.info();
+        dogSecond.run(100);
+        dogSecond.info();
+        dogSecond.swim(10);
+        dogSecond.info();
+        System.out.println();
+        soul.info();
+        soul.swim(10);
+        soul.info();
     }
 
 

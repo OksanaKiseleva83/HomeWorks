@@ -1,4 +1,4 @@
-package lessonnumbereleven;
+package ru.otus.kiseleva.homeworks.lesson11;
 
 public class Cat extends Animal{
 
@@ -14,8 +14,8 @@ public class Cat extends Animal{
 
     @Override
     public String toString() {
-        return "Cat\nname: " + getName() + "\nspeedRunning: " + getSpeedRunning() +
-                "\nspeedSwimming: " + getSpeedSwimming() + "\nendurance: " + getEndurance() + "\ntype: " + getType();
+        return "Cat\nname: " + name + "\nspeedRunning: " + speedRunning +
+                "\nspeedSwimming: " + speedSwimming + "\nendurance: " + endurance + "\ntype: " + type;
     }
 
 }
