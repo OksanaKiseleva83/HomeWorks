@@ -12,67 +12,46 @@ public abstract class Animal {
 
     protected String type;
 
-    public Animal(String name, int speedRunning, int speedSwimming, int endurance,String type) {
+    protected int swimAbility;
+
+    public Animal(String name, int speedRunning, int speedSwimming, int endurance, String type, int swimAbility) {
         this.name = name;
         this.speedRunning = speedRunning;
         this.speedSwimming = speedSwimming;
         this.endurance = endurance;
-        this.type=type;
+        this.type = type;
+        this.swimAbility = swimAbility;
     }
 
     public int run(int distance) {
-        if (endurance > 0){
+        if (speedRunning <= 0) {
+            System.out.println("Животное " + type + " с именем " + name + " не умеет бегать!");
+            return -1;
+        }
+        if (endurance > 0) {
             endurance -= distance;
             return distance / speedRunning;
-        }else{
+        } else {
             System.out.println("У животного " + type + " с именем " + name + " появилось состояние усталости! Бег невозможен.");
             return -1;
         }
     }
 
-    public abstract int swim(int distance);
+    public int swim(int distance) {
+        if (swimAbility <= 0 || speedSwimming <= 0) {
+            System.out.println("Животное " + type + " с именем " + name + " не умеет плавать!");
+            return -1;
+        }
+        if (endurance > 0) {
+            endurance -= swimAbility * distance;
+            return distance / speedSwimming;
+        } else {
+            System.out.println("У животного " + type + " появилось состояние усталости! Плыть невозможно.");
+            return -1;
+        }
+    }
 
     public void info() {
         System.out.println(this.toString());
     }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public int getSpeedRunning() {
-//        return speedRunning;
-//    }
-//
-//    public void setSpeedRunning(int speedRunning) {
-//        this.speedRunning = speedRunning;
-//    }
-//
-//    public int getSpeedSwimming() {
-//        return speedSwimming;
-//    }
-//
-//    public void setSpeedSwimming(int speedSwimming) {
-//        this.speedSwimming = speedSwimming;
-//    }
-//
-//    public int getEndurance() {
-//        return endurance;
-//    }
-//
-//    public void setEndurance(int endurance) {
-//        this.endurance = endurance;
-//    }
-//
-//    public String getType() {
-//        return type;
-//    }
-//
-//    public void setType(String type) {
-//        this.type = type;
-//    }
 }

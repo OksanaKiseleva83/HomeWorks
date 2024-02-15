@@ -19,11 +19,12 @@ public class Main {
          * При выполнении действий пишем сообщения в консоль.
          * Добавляем метод info(), который выводит в консоль состояние животного.
          */
-        Dog dogFirst = new Dog("Pink", 48,4,100, "собака");
-        Dog dogSecond = new Dog("Border", 48,-1,100, "собака");
-        Cat cat = new Cat("Java", 10,-1,50, "кот");
-        Horse spirit = new Horse("Spirit", 71,20,1500, "лошадь");
-        Horse soul = new Horse("Soul", 71,-1,1500, "лошадь");
+        Dog dogFirst = new Dog("Pink", 48,4,100, "собака",2);
+        Dog dogSecond = new Dog("Border", 48,-1,100, "собака",2);
+        Cat cat = new Cat("Java", 10,-1,50, "кот", 0);
+        Horse spirit = new Horse("Spirit", 71,20,1500, "лошадь", 4);
+        Horse soul = new Horse("Soul", 71,-1,1500, "лошадь", 4);
+        Horse turtle = new Horse("Turtle", 0,0,1000, "лошадь", 4);
 
         dogFirst.info();
         dogFirst.run(15);
@@ -60,6 +61,12 @@ public class Main {
         soul.info();
         soul.swim(10);
         soul.info();
+        System.out.println();
+        turtle.info();
+        turtle.run(15);
+        turtle.info();
+        turtle.swim(5);
+        turtle.info();
     }
 
 
