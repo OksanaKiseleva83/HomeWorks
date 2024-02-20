@@ -29,8 +29,14 @@ public abstract class Animal {
             return -1;
         }
         if (endurance > 0) {
-            endurance -= distance;
-            return distance / speedRunning;
+            if (endurance >= distance) {
+                endurance -= distance;
+                return distance / speedRunning;
+            } else {
+                System.out.println("У животного " + type + " с именем " + name + " выносливость " + endurance +
+                        " недостаточна для бега на дистанции " + distance);
+                return -1;
+            }
         } else {
             System.out.println("У животного " + type + " с именем " + name + " появилось состояние усталости! Бег невозможен.");
             return -1;
@@ -43,8 +49,14 @@ public abstract class Animal {
             return -1;
         }
         if (endurance > 0) {
-            endurance -= swimAbility * distance;
-            return distance / speedSwimming;
+            if (endurance >= swimAbility * distance) {
+                endurance -= swimAbility * distance;
+                return distance / speedSwimming;
+            } else {
+                System.out.println("У животного " + type + " с именем " + name + " выносливость " + endurance +
+                        " недостаточна, чтобы плыть на дистанции " + distance);
+                return -1;
+            }
         } else {
             System.out.println("У животного " + type + " появилось состояние усталости! Плыть невозможно.");
             return -1;

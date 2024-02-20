@@ -21,6 +21,7 @@ public class Main {
          */
         Dog dogFirst = new Dog("Pink", 48,4,100, "собака",2);
         Dog dogSecond = new Dog("Border", 48,-1,100, "собака",2);
+        Dog dogThird = new Dog("Candy", 48,4,1, "собака",2);
         Cat cat = new Cat("Java", 10,-1,50, "кот", 0);
         Horse spirit = new Horse("Spirit", 71,20,1500, "лошадь", 4);
         Horse soul = new Horse("Soul", 71,-1,1500, "лошадь", 4);
@@ -67,6 +68,12 @@ public class Main {
         turtle.info();
         turtle.swim(5);
         turtle.info();
+        System.out.println();
+        dogThird.info();
+        dogThird.run(150);
+        dogThird.info();
+        dogThird.swim(5);
+        dogThird.info();
     }
 
 
