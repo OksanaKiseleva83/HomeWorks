@@ -77,8 +77,4 @@ public class HomeWorkLessonNo15Second {
         System.out.println(arraySource);
     }
 
-    /**
-     *
-     */
-
 }
